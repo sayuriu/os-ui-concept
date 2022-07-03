@@ -44,7 +44,7 @@ const ClockDigit: FC<IClockDigit> = ({ digit, fadable = false, color, light = fa
 }
 
 const ClockLabel: FC<{ children: ReactNode }> = ({ children }) =>
-    <MotionBox layout={"position"} as={"p"} fontFamily={"Jetbrains Mono"} fontSize={46} fontWeight={"light"}>{children}</MotionBox>
+    <MotionBox pt={1} layout={"position"} as={"p"} fontFamily={"Jetbrains Mono"} fontSize={43} fontWeight={"light"}>{children}</MotionBox>
 const ClockLabelMinor: FC<{ children: ReactNode } & MotionBoxProps> = ({ children, ...props }) =>
     <MotionBox
         layout={"position"}
@@ -137,20 +137,20 @@ export const Clock: FC<IClockConfig> = ({
                 <ClockDigit digit={currentTime.hr[0]} fadable={_fadable}/>
                 <ClockDigit digit={currentTime.hr[1]}/>
             </ClockLabel>
-            <MotionBox as={"p"} fontSize={30} animate={{ color: blink ? "#dddddd" : "#555555" }} transition={transition}>◦</MotionBox>
+            <MotionBox as={"p"} fontSize={30} animate={{ y: -1, color: blink ? "#dddddd" : "#555555" }} transition={transition}>◦</MotionBox>
             <ClockLabel>
                 <ClockDigit digit={currentTime.mn[0]} fadable={_fadable}/>
                 <ClockDigit digit={currentTime.mn[1]}/>
             </ClockLabel>
             {'∙'}
             <MotionFlex layout={"size"} flexDir={"column"} justifyContent={"center"} gap={"0px"}>
-                <ClockLabelMinor animate={{ y: useMT ? "10px" : 0}}>
+                <ClockLabelMinor animate={{ y: useMT ? 11 : 2}}>
                     <ClockDigit digit={currentTime.sc[0]} fadable={_fadable}/>
                     <ClockDigit digit={currentTime.sc[1]}/>
                 </ClockLabelMinor>
                 <ClockLabelMinor
-                    initial={{ y: useMT ? undefined : "30px" }}
-                    animate={{ y: useMT ? "30px" : 0 }}
+                    initial={{ y: useMT ? undefined : 30 }}
+                    animate={{ y: useMT ? 30 : 0 }}
                     // transition={Object.assign(transition,  { delay: useMT ? 0 : .5 })}
                 >
                     <ClockDigit digit={currentTime.hr[0] === "░" ? "░░" : (isAM ? "AM" : "PM")} color={isAM ? '#3ba4fa' : "#5cbc6b"}/>

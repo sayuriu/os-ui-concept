@@ -1,5 +1,5 @@
 import { motion, MotionProps } from 'framer-motion';
-import { Resizable, ResizableProps } from 'react-resizable';
+import { Resizable, ResizableBox, ResizableBoxProps, ResizableProps } from 'react-resizable';
 import {
     Box,
     BoxProps,
@@ -35,7 +35,7 @@ export type MotionTextProps = Omit<TextProps, keyof MotionProps> & MotionProps
 export const MotionText = motion<Omit<TextProps, keyof MotionProps> & MotionProps>(Text as any);
 
 export const MotionResizable = motion<Omit<ResizableProps, keyof MotionProps> & MotionProps>(Resizable);
-
+export const MotionResizableBox = motion<Omit<ResizableBoxProps, keyof MotionProps> & MotionProps>(ResizableBox)
 
 
 

@@ -74,8 +74,16 @@ export const DesktopView: FC<hasChildren> = ({ children }) => {
         <AnimatePresence>
             {isLoggedIn &&
                 <StatusBar>
-                    <MotionFlex h={"100%"} w={"calc((1920px - 145px) / 2)"} flexDir={"row"}>
+                    <MotionFlex gap={34} h={"100%"} w={"calc((1920px - 145px) / 2)"} flexDir={"row"} alignItems={"center"}>
+                        <MotionButton h={"100%"} w={"50px"} p={0}>
 
+                        </MotionButton>
+                        <MotionFlex h={38} gap={"10px"}>
+                            <MotionButton h={"85%"} w={"85%"}></MotionButton>
+                            <MotionButton h={"85%"} w={"85%"}></MotionButton>
+                            <MotionButton h={"85%"} w={"85%"}></MotionButton>
+                            <MotionButton h={"85%"} w={"85%"}></MotionButton>
+                        </MotionFlex>
                     </MotionFlex>
                     <Clock
                         GMTOffset={7}

@@ -142,8 +142,8 @@ const SystemStatItem: FC<ISystemStatItem & MotionButtonProps & hasChildren> = ({
             overflow={"hidden"}
             h={"100%"}
         >
-            <MotionBox animate={{ y: (isHovering && label) ? "7px" : "17px" }} {...textProps} pr={"5px"}>{percentageString}</MotionBox>
-            {label && <MotionBox fontWeight={"light"} animate={{ y: isHovering ? "7px" : "37px" }} {...textProps} pr={"7px"}>{label}</MotionBox>}
+            <MotionBox animate={{ y: (isHovering && label) ? "3px" : "13px" }} {...textProps} pr={"5px"}>{percentageString}</MotionBox>
+            {label && <MotionBox fontWeight={"light"} animate={{ y: isHovering ? "2px" : "37px" }} {...textProps} pr={"7px"}>{label}</MotionBox>}
         </MotionFlex>
         <AnimatePresence>
             {

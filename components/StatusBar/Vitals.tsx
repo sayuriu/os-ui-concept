@@ -24,10 +24,10 @@ export const Vitals = () => {
                 alignContent={"center"}
                 gap={"10px"}
             >
-                <VitalIcon key={"vital-broadcast"} pt={"14px"}>&#xe0ce;</VitalIcon>
-                <VitalIcon key={"vital-wifi"} pt={"14px"}>&#xe1d8;</VitalIcon>
-                <VitalIcon key={"vital-sat"} pt={"14px"}>&#xe1d0;</VitalIcon>
-                <VitalIcon key={"vital-batt"} pt={"14px"}>&#xe1a3;</VitalIcon>
+                <VitalIcon key={"vital-broadcast"} pt={"10px"}>&#xe0ce;</VitalIcon>
+                <VitalIcon key={"vital-wifi"} pt={"10px"}>&#xe1d8;</VitalIcon>
+                <VitalIcon key={"vital-sat"} pt={"10px"}>&#xe1d0;</VitalIcon>
+                <VitalIcon key={"vital-batt"} pt={"10px"}>&#xe1a3;</VitalIcon>
             </MotionFlex>
         </MotionButton>
     );
